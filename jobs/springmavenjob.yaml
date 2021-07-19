@@ -1,0 +1,38 @@
+- job:
+    scm:
+      - Springboot-Maven
+    builders:
+      - maven-target:
+            maven-version: Maven3
+            pom: spring-boot-samples\spring-boot-sample-atmosphere\pom.xml
+            goals: clean compile package install test
+    publishers:
+      - archive:
+          artifacts: 'spring-boot-samples\spring-boot-sample-atmosphere\target\*.jar'
+          allow-empty: 'true'
+          fingerprint: true
+          default-excludes: false
+    name: Springboot-Maven
+    project-type: freestyle
+    defaults: global
+    description: 'DThis Job Builds a Maven Spring Project'
+    disabled: false
+    display-name: 'Springboot-Maven'
+    concurrent: true
+    quiet-period: 5
+    block-downstream: false
+    block-upstream: false
+    retry-count: 3
+    node: master
+    logrotate:
+      daysToKeep: 3
+      numToKeep: 20
+      artifactDaysToKeep: -1
+      artifactNumToKeep: -1
+- scm:
+    name: Springboot-Maven
+    scm:
+      - git:
+         url: https://github.com/Shreyasc27/Spring-Boot.git
+         branches:
+          - master
