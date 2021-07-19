@@ -1,0 +1,21 @@
+- job:
+    project-type: pipeline
+    name: 'JavaPipeline'
+    sandbox: true
+    parameters:
+    - string:
+        default: 'Java'
+        description: 'folder name'
+        name: FOLDER_NAME
+    pipeline-scm:
+        scm:
+        - git:
+            url: https://github.com/adityachaphekar/coesampleapp.git
+            branches:
+              - '*/master'
+            clean: true
+        script-path: pipeline/samplepipeline.groovy
+        lightweight-checkout: true
+    wrappers:
+    - build-name:
+        name: "#$BUILD_NUMBER mkdir $FOLDER_NAME"
