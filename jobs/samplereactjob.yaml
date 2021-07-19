@@ -1,10 +1,10 @@
 - job:
     project-type: pipeline
-    name: 'JavaPipeline'
+    name: 'ReactPipeline'
     sandbox: true
     parameters:
     - string:
-        default: 'Java'
+        default: 'React'
         description: 'folder name'
         name: FOLDER_NAME
     pipeline-scm:
