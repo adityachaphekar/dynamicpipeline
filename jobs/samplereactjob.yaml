@@ -14,7 +14,7 @@
             branches:
               - '*/master'
             clean: true
-        script-path: pipeline/samplepipeline.groovy
+        script-path: pipeline/samplereactpipeline.groovy
         lightweight-checkout: true
     wrappers:
     - build-name:
