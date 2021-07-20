@@ -6,7 +6,7 @@
     - string:
         default: 'React'
         description: 'build name'
-        name: FOLDER_NAME
+        name: BUILD_NAME
     pipeline-scm:
         scm:
         - git:
@@ -18,4 +18,4 @@
         lightweight-checkout: true
     wrappers:
     - build-name:
-        name: "#$BUILD_NUMBER mkdir $FOLDER_NAME"
+        name: "#$BUILD_NUMBER mkdir $BUILD_NAME"
