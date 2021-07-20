@@ -5,7 +5,7 @@
     parameters:
     - string:
         default: 'React'
-        description: 'folder name'
+        description: 'build name'
         name: FOLDER_NAME
     pipeline-scm:
         scm:
