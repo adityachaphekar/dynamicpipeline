@@ -14,7 +14,7 @@
     pipeline-scm:
         scm:
         - git:
-            url: https://github.com/adityachaphekar/dynamicpipeline.git
+            url: <pipeline_git_url>
             branches:
               - '*/master'
             clean: true
