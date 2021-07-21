@@ -6,7 +6,7 @@
     - string:
         default: 'React'
         description: 'build name'
-        name: New
+        name: BUILD_NAME
     pipeline-scm:
         scm:
         - git:
