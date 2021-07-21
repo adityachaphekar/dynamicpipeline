@@ -1,20 +1,20 @@
 - job:
     project-type: pipeline
-    name: 'React'
+    name: <Pipeline Name>
     sandbox: true
     parameters:
     - string:
-        default: 'React'
+        default: <Build Name>
         description: 'build name'
         name: BUILD_NAME
     - string:
-        default: 'NA'
+        default: <App Git URL>
         description: 'application git url'
         name: GIT_URL
     pipeline-scm:
         scm:
         - git:
-            url: <pipeline_git_url>
+            url: <Pipeline Git Url>
             branches:
               - '*/master'
             clean: true
