@@ -7,6 +7,10 @@
         default: 'React'
         description: 'build name'
         name: BUILD_NAME
+    - string:
+        default: 'NA'
+        description: 'application git url'
+        name: GIT_URL
     pipeline-scm:
         scm:
         - git:
