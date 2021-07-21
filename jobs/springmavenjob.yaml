@@ -1,6 +1,9 @@
 - job:
     scm:
-      - Springboot-Maven
+      - git:
+         url: <Application Git URL>
+         branches:
+          - master
     builders:
       - maven-target:
             maven-version: <Maven Version>
@@ -29,10 +32,3 @@
       numToKeep: 20
       artifactDaysToKeep: -1
       artifactNumToKeep: -1
-- scm:
-    name: Springboot-Maven
-    scm:
-      - git:
-         url: <Application Git URL>
-         branches:
-          - master
