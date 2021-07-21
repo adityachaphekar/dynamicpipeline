@@ -1,6 +1,6 @@
 - job:
     project-type: pipeline
-    name: 'ReactPipeline'
+    name: 'React'
     sandbox: true
     parameters:
     - string:
