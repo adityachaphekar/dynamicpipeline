@@ -3,21 +3,21 @@
       - Springboot-Maven
     builders:
       - maven-target:
-            maven-version: Maven3
-            pom: spring-boot-samples\spring-boot-sample-atmosphere\pom.xml
+            maven-version: <Maven Version>
+            pom: <Path of Pom.xml>
             goals: clean compile package install test
     publishers:
       - archive:
-          artifacts: 'spring-boot-samples\spring-boot-sample-atmosphere\target\*.jar'
+          artifacts: <Path to store the build artifacts>
           allow-empty: 'true'
           fingerprint: true
           default-excludes: false
-    name: Springboot-Maven
+    name: <Job Name>
     project-type: freestyle
     defaults: global
     description: 'DThis Job Builds a Maven Spring Project'
     disabled: false
-    display-name: 'Springboot-Maven'
+    display-name: <Display Name>
     concurrent: true
     quiet-period: 5
     block-downstream: false
@@ -33,6 +33,6 @@
     name: Springboot-Maven
     scm:
       - git:
-         url: https://github.com/Shreyasc27/Spring-Boot.git
+         url: <Application Git URL>
          branches:
           - master
