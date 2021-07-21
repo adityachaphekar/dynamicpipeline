@@ -1,8 +1,8 @@
 timeout(5) {
   node("master") {
     stage("Code Check Out") {
-      sh("git clone ${Clone_URL}")
-      echo("${Clone_URL} Repository was successfully cloned.")
+      sh("git clone ${GIT_URL}")
+      echo("${GIT_URL} Repository was successfully cloned.")
     }
 	
     stage("Build Node Modules") {
